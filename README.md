@@ -38,18 +38,21 @@ Node.js (v14 or above)
 npm or yarn
 Step-by-Step Guide:
 
-1.Clone the Repository:
-   
-    ```bash
-    git clonehttps://github.com/RVJVIJAY/Movie-Collection-Project.git
-    cd Movie-Collection-Project
+```bash
+# 1. Clone the Repository
+git clone https://github.com/RVJVIJAY/Movie-Collection-Project.git
+cd Movie-Collection-Project
 
-2.Install Dependencies:
-    npm install
-3.Obtain OMDB API Key:
-    Go to the OMDB website and generate your API key.
-4.Start the Development Server:
-    npm start
+# 2. Install Dependencies
+npm install
+
+# 3. Obtain OMDB API Key
+# (This step does not have a Bash command; just a note)
+echo "Go to the OMDB website and generate your API key."
+
+# 4. Start the Development Server
+npm start
+
 
 
 💡 Usage

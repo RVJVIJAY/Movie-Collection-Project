@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,22 +5,20 @@ body {
     background-color: #f0f0f0;
 }
 
-
-.seachdiv {
+.searchdiv {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
 }
 
-/* Search input styles */
-.seach {
+.search {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-.seach input[type='text'] {
+.search input[type='text'] {
     padding: 10px;
     width: 300px;
     border: 1px solid #ccc;
@@ -30,12 +27,11 @@ body {
     transition: border-color 0.3s;
 }
 
-.seach input[type='text']:focus {
+.search input[type='text']:focus {
     border-color: #007bff;
     outline: none;
 }
 
-/* Button styles */
 .btn-search {
     padding: 10px 15px;
     background-color: #007bff;
@@ -52,7 +48,6 @@ body {
     background-color: #0056b3;
 }
 
-
 .movie-list-card {
     display: flex;
     flex-wrap: wrap;
@@ -61,7 +56,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 
 .individual-card {
     background-color: white;
@@ -81,7 +75,6 @@ body {
     height: auto;
 }
 
-/* Title and Year styles */
 .sameline-div {
     padding: 10px;
     display: flex;

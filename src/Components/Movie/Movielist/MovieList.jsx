@@ -6,68 +6,76 @@ import Loader from "../../Loader";
 
 const MovieList = () => {
   const navigate = useNavigate();
-  const apikey = `a9118a3a`;
-  const [search, setseach] = useState("");
-  const [movie, setmovie] = useState([]);
-  const [loading, setloading] = useState(false);
+  const apikey = "a9118a3a";
+  const [search, setSearch] = useState(""); 
+  const [movies, setMovies] = useState([]); 
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
-    Showdata();
-  }, [search]);
+    if (search) {
+      Showdata();
+    } else {
+      setMovies([]); 
+    }
+  }, [search]); 
 
   const Showdata = async () => {
-    setloading(true);
+    setLoading(true);
     try {
-      const data = await axios.get(
+      const response = await axios.get(
         `https://www.omdbapi.com/?s=${search}&apikey=${apikey}`
       );
-      setmovie(data.data.Search || []);
-      setloading(false);
+      setMovies(response.data.Search || []);
     } catch (err) {
-      console.log(err);
-      setloading(false);
+      console.error(err); 
+    } finally {
+      setLoading(false); 
     }
-    console.log(search);
-    console.log(movie || "empty");
   };
 
   return (
     <div>
-      <div className="seachdiv">
-        <div className="seach container">
+      <div className="search-div">
+        <div className="search container">
           <input
             type="text"
-            placeholder="enter the movie name "
-            onChange={(e) => setseach(e.target.value)}
+            placeholder="Enter the movie name"
+            onChange={(e) => setSearch(e.target.value)}
             value={search}
           />
           <button
             type="submit"
             className="btn-search"
-            onClick={() => Showdata()}
+            onClick={Showdata} 
           >
-            {" "}
             Search
           </button>
         </div>
+        
         {loading ? (
           <Loader />
         ) : (
           <div className="movie-list-card">
-            {movie?.map((item, index) => {
-              const { Title, Year, imdbID, Type, Poster } = item;
-              return (
-                <div
-                  className="individual-card"
-                  onClick={() => navigate(`/search/${imdbID}`)}
-                >
-                  <img src={Poster} alt="img"></img>
-                  <div className="sameline-div">
-                    <p>{Title}</p>
-                    <p>{Year}</p>
+            {movies.length > 0 ? (
+              movies.map((item, index) => {
+                const { Title, Year, imdbID, Type, Poster } = item;
+                return (
+                  <div
+                    key={imdbID} 
+                    className="individual-card"
+                    onClick={() => navigate(`/search/${imdbID}`)}
+                  >
+                    <img src={Poster} alt="Movie Poster" />
+                    <div className="sameline-div">
+                      <p>{Title}</p>
+                      <p>{Year}</p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })
+            ) : (
+              <p>No movies found. Please try a different search.</p>
+            )}
           </div>
         )}
       </div>

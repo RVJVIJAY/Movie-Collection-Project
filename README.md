@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+🎥 Movie Collection App
+A React.js application that allows users to search for movies and view details about specific movies. The app uses the OMDB API to fetch movie information.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+📝 Features
+Search for Movies: Users can search for movies by typing in the name of the movie.
+Movie Collection Display: After searching, a collection of movies matching the search query is displayed.
+Movie Details Page: By clicking on a specific movie, users are navigated to a page with more details about the movie such as the title, release year, runtime, director, language, IMDb rating, and awards.
+Responsive Design: The app is designed to be responsive and user-friendly across various devices.
+🚀 Live Demo
+Movie Collection App Demo <!-- Add the live link if deployed -->
 
-## Available Scripts
+🛠️ Technologies Used
+React.js: Frontend library for building user interfaces.
+OMDB API: Used to fetch movie data such as titles, posters, descriptions, and more.
+Axios: For making HTTP requests to the OMDB API.
+React Router: For handling page navigation between movie search results and movie details.
+CSS: For styling the app and creating a responsive layout.
 
-In the project directory, you can run:
+🌐 OMDB API
+This project uses the OMDB API to fetch movie information. You need to obtain an API key by signing up on the OMDB website.
 
-### `npm start`
+API Base URL: http://www.omdbapi.com/
+Example Request: http://www.omdbapi.com/?s=batman&apikey=your_api_key
+API Endpoints Used
+Search Movies: http://www.omdbapi.com/?s={movie_name}&apikey={api_key}
+Movie Details: http://www.omdbapi.com/?i={imdb_id}&apikey={api_key}
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+⚙️ Installation and Setup
+Prerequisites
+Make sure you have the following installed on your local machine:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Node.js (v14 or above)
+npm or yarn
+Step-by-Step Guide:
 
-### `npm test`
+1.Clone the Repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash```
+        git clonehttps://github.com/RVJVIJAY/Movie-Collection-Project.git
+        cd Movie-Collection-Project
 
-### `npm run build`
+2.Install Dependencies:
+        npm install
+3.Obtain OMDB API Key:
+        Go to the OMDB website and generate your API key.
+4.Start the Development Server:
+        npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+💡 Usage
+Search Movies: Enter the name of a movie in the search bar. The app will fetch a collection of movies matching the query.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+View Movie Details: Click on any movie in the collection to view more details about it on a new page.
 
-### `npm run eject`
+🛠️ Tools and Libraries
+React: A JavaScript library for building user interfaces.
+Axios: For making HTTP requests to the OMDB API.
+React Router: For handling routes and navigation.
+CSS: For styling components and layouts.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🤝 Contributing
+If you would like to contribute to this project, feel free to submit a pull request. Please make sure to follow the code of conduct before contributing.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Make your changes.
+Commit your changes (git commit -m 'Add new feature').
+Push to the branch (git push origin feature/your-feature).
+Open a pull request.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🙏 Acknowledgements
+OMDB API for providing movie data.
+React for the powerful frontend library.
+Axios for simplifying API requests.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
